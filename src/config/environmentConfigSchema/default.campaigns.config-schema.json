@@ -1,0 +1,15 @@
+{
+  "description": "Configuration schema for initializeJourneysAndCampaigns",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "journeysAndCampaigns": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    },
+    "required": ["journeysAndCampaigns"]
+  }
+}

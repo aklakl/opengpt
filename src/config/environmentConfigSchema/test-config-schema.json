@@ -1,0 +1,29 @@
+{
+  "description": "configuration schema for test",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "brazeCampaignId": {
+          "type": "string"
+        },
+        "originCampaignId": {
+          "type": "string"
+        },
+        "segmentId": {
+          "type": "string"
+        },
+        "campaignType": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "brazeCampaignId",
+        "originCampaignId",
+        "segmentId",
+        "campaignType"
+      ]
+    }
+  }
+}

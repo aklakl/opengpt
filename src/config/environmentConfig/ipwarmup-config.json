@@ -1,0 +1,14 @@
+{
+  "tableName": "warmup_config",
+  "initialCount": 50,
+  "initialStep": 2,
+  "warningBounceRate": 5,
+  "warningReceivers": [
+    "sameer@opengpt.com",
+    "vansh@opengpt.com"
+  ],
+  "externalConfig": {
+    "databricks": 16000,
+    "postgres": 16000
+  }
+}

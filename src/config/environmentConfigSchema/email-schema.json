@@ -1,0 +1,50 @@
+{
+  "description": "Configuration schema for email",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "outgoingHost": {
+        "type": "string"
+      },
+      "outgoingPort": {
+        "type": "number"
+      },
+      "outgoingSecure": {
+        "type": "boolean"
+      },
+      "incomingHost": {
+        "type": "string"
+      },
+      "incomingPort": {
+        "type": "number"
+      },
+      "incomingSecure": {
+        "type": "boolean"
+      },
+      "username": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "nickname": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "outgoingHost",
+      "outgoingPort",
+      "outgoingSecure",
+      "incomingHost",
+      "incomingPort",
+      "incomingSecure",
+      "username",
+      "password",
+      "nickname",
+      "address"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "description": "Configuration schema for PostgreSQL credentials fetched from parameter store",
+  "schema": {
+    "title": "PostgreSQL Credentials Config",
+    "type": "object",
+    "properties": {
+      "host": {
+        "description": "host",
+        "type": "string"
+      },
+      "port": {
+        "description": "port",
+        "type": "integer"
+      },
+      "database": {
+        "description": "database",
+        "type": "string"
+      },
+      "username": {
+        "description": "username",
+        "type": "string"
+      },
+      "password": {
+        "description": "password",
+        "type": "string"
+      }
+    },
+    "required": ["host", "port", "database", "username", "password"],
+    "additionalProperties": false
+  }
+}

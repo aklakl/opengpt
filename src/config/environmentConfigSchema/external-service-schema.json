@@ -1,0 +1,39 @@
+{
+  "description": "Configuration schema for external service",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "crusade": {
+        "type": "object",
+        "properties": {
+          "apiEndpoint": {
+            "type": "string"
+          },
+          "authUsername": {
+            "type": "string"
+          },
+          "authPassword": {
+            "type": "string"
+          }
+        },
+        "required": ["apiEndpoint"]
+      },
+      "generate": {
+        "type": "object",
+        "properties": {
+          "apiEndpoint": {
+            "type": "string"
+          },
+          "authUsername": {
+            "type": "string"
+          },
+          "authPassword": {
+            "type": "string"
+          }
+        },
+        "required": ["apiEndpoint"]
+      }
+    },
+    "required": ["generate", "crusade"]
+  }
+}

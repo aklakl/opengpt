@@ -1,0 +1,23 @@
+[
+  {
+    "partnerId": "vansh-test",
+    "brazeCampaignId": "b3d16106-0706-6d0d-9828-f6596f8c59e1",
+    "originCampaignId": "2f9f0a1c-6e24-4976-9ce8-2a3de56bf396",
+    "segmentId": "0e777405-c72c-4942-8992-683f044821f6",
+    "campaignType": "email"
+  },
+  {
+    "partnerId": "vansh-test",
+    "brazeCampaignId": "eaaaadcb-64af-bf64-36d8-dd71328908c1",
+    "originCampaignId": "4b18a2a0-2d69-4799-8431-5fada65a45ce",
+    "segmentId": "0e777405-c72c-4942-8992-683f044821f6",
+    "campaignType": "pushNotification"
+  },
+  {
+    "partnerId": "vansh-test",
+    "brazeCampaignId": "b3d16106-0706-6d0d-9828-f6596f8c59e1",
+    "originCampaignId": "2f9f0a1c-6e24-4976-9ce8-2a3de56bf396",
+    "segmentId": "0e777405-c72c-4942-8992-683f044821f6",
+    "campaignType": "warmup"
+  }
+]

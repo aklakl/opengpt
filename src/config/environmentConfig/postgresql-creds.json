@@ -1,0 +1,7 @@
+{
+  "host": "duploharvest-cicd-dev-usw2-cluster.cluster-cevzy51yespb.us-west-2.rds.amazonaws.com",
+  "port": 5432,
+  "database": "harvest",
+  "username": "dev_usw2_crusade_readwrite",
+  "password": "biShaLKIneGYroPEINvOSOliNEgusTRUmniatIOnOLOaTe"
+}

@@ -1,0 +1,23 @@
+{
+  "description": "Configuration schema for common config object fetched from parameter store",
+  "schema": {
+    "title": "Common config Object",
+    "type": "object",
+    "properties": {
+      "region": {
+        "description": "region",
+        "type": "string"
+      },
+      "environment": {
+        "description": "environment",
+        "type": "string"
+      },
+      "newRelicLicenseKey": {
+        "description": "newRelicLicenseKey",
+        "type": "string"
+      }
+    },
+    "required": ["region", "environment"],
+    "additionalProperties": true
+  }
+}

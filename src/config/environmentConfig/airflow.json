@@ -1,0 +1,6 @@
+{
+  "remotePath": "dags/",
+  "region": "us-west-2",
+  "bucketName": "mwaa-airflow-test",
+  "airflowName": "MyAirflowEnvironment"
+}

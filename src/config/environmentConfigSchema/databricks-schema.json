@@ -1,0 +1,42 @@
+{
+  "description": "Configuration schema for databricks",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "odbc": {
+        "type": "object",
+        "properties": {
+          "dsn": {
+            "type": "string"
+          },
+          "host": {
+            "type": "string"
+          },
+          "port": {
+            "type": "integer"
+          },
+          "httpPath": {
+            "type": "string"
+          },
+          "token": {
+            "type": "string"
+          }
+        },
+        "required": ["dsn", "host", "port", "httpPath", "token"]
+      },
+      "tables": {
+        "type": "object",
+        "properties": {
+          "locationData": {
+            "type": "string"
+          },
+          "metaData": {
+            "type": "string"
+          }
+        },
+        "required": ["locationData", "metaData"]
+      }
+    },
+    "required": ["odbc", "tables"]
+  }
+}

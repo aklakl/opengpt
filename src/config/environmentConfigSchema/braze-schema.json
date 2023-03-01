@@ -1,0 +1,18 @@
+{
+  "description": "Configuration schema for braze",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "baseUrl": {
+        "type": "string"
+      },
+      "apiKey": {
+        "type": "string"
+      },
+      "appId": {
+        "type": "string"
+      }
+    },
+    "required": ["baseUrl", "apiKey", "appId"]
+  }
+}

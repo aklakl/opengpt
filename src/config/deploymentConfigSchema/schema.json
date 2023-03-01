@@ -1,0 +1,178 @@
+{
+  "description": "Configuration schema for the Harvest Crusade API",
+  "schema": {
+    "title": "Harvest Crusade Service API",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "featureFlags": {
+        "description": "contains all the feature flags for this deployment",
+        "type": "object",
+        "properties": {
+          "enableNewRelicAgent": {
+            "description": "decides if new relic agent is on or off",
+            "type": "boolean"
+          },
+          "cors": {
+            "description": "decides if CORS rules should be on or off",
+            "type": "boolean"
+          }
+        },
+        "required": ["enableNewRelicAgent", "cors"]
+      },
+      "cors": {
+        "description": "contains all the CORS rules for this deployment",
+        "type": "object",
+        "properties": {
+          "origin": {
+            "description": "the origin of the CORS request",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "logLevel": {
+        "description": "log level",
+        "type": "string"
+      },
+      "logger": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string",
+            "enum": ["trace", "debug", "info", "warn", "error", "fatal"]
+          },
+          "transport": {
+            "type": "object",
+            "properties": {
+              "target": {
+                "type": "string",
+                "enum": ["pino-pretty"]
+              }
+            },
+            "required": ["target"],
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false,
+        "required": ["name", "level"]
+      },
+      "oktaSso": {
+        "description": "contains Okta defintion",
+        "type": "object",
+        "properties": {
+          "authServer": {
+            "description": "Authorization server URL for Okta",
+            "type": "string"
+          },
+          "allowedClients": {
+            "description": "client ids for Okta",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allowedAudience": {
+            "description": "Okta SSO allowed audience from authorization servers",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": ["authServer", "allowedClients", "allowedAudience"],
+        "additionalProperties": false
+      },
+      "newRelicConfig": {
+        "type": "object",
+        "properties": {
+          "appName": {
+            "type": "string"
+          }
+        },
+        "required": ["appName"]
+      },
+      "brazeConfig": {
+        "type": "object",
+        "properties": {
+          "campaignsListResource": {
+            "type": "string"
+          },
+          "templatesEmailListResource": {
+            "type": "string"
+          },
+          "messagesSendResource": {
+            "type": "string"
+          },
+          "templatesEmailInfoResource": {
+            "type": "string"
+          },
+          "contentBlocksListResource": {
+            "type": "string"
+          },
+          "contentBlocksInfoResource": {
+            "type": "string"
+          },
+          "campaignsDataSeriesResource": {
+            "type": "string"
+          },
+          "sendsIdCreateResource": {
+            "type": "string"
+          },
+          "campaignsDetailsResource": {
+            "type": "string"
+          },
+          "usersTrackResource": {
+            "type": "string"
+          },
+          "sendsDataSeriesResource": {
+            "type": "string"
+          },
+          "partnersResource": {
+            "type": "string"
+          },
+          "partnerIdSegmentTreeResource": {
+            "type": "string"
+          },
+          "defaultJourneysAndCampaignsConfig": {
+            "type": "array"
+          },
+          "defaultPartnerConfiguration": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "defaultJourneysAndCampaignsConfig",
+          "defaultPartnerConfiguration"
+        ]
+      }
+    },
+    "allOf": [
+      {
+        "if": {
+          "properties": {
+            "featureFlags": {
+              "type": "object",
+              "properties": {
+                "enableNewRelicAgent": {
+                  "const": true
+                }
+              }
+            }
+          }
+        },
+        "then": {
+          "required": ["newRelicConfig", "oktaSso", "logger"]
+        },
+        "else": {
+          "required": ["oktaSso"]
+        }
+      }
+    ]
+  }
+}

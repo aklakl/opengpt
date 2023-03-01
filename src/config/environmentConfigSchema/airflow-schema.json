@@ -1,0 +1,18 @@
+{
+  "description": "Configuration schema for airflow",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "remotePath": {
+        "type": "string"
+      },
+      "region": {
+        "type": "string"
+      },
+      "bucketName": {
+        "type": "string"
+      }
+    },
+    "required": ["remotePath", "region", "bucketName"]
+  }
+}

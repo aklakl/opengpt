@@ -1,0 +1,10 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "assets": ["airflow-restapi/dags/http_template_dag.py"],
+    "plugins": ["@nestjs/swagger"],
+    "dtoKeyOfComment": "on",
+    "controllerKeyOfComment": "on"
+  }
+}

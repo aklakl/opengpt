@@ -1,0 +1,12 @@
+{
+  "generate": {
+    "apiEndpoint": "https://harvest-dev-usw2-external.data.opengpt.tech/generate",
+    "authUsername": "aaa",
+    "authPassword": "bbb"
+  },
+  "crusade": {
+    "apiEndpoint": "https://harvest-dev-usw2-external.data.opengpt.tech/crusade",
+    "authUsername": "aaa",
+    "authPassword": "bbb"
+  }
+}

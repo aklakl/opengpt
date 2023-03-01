@@ -1,0 +1,12 @@
+{
+  "outgoingHost": "smtp.yandex.com",
+  "outgoingPort": 465,
+  "outgoingSecure": true,
+  "incomingHost": "imap.yandex.com",
+  "incomingPort": 993,
+  "incomingSecure": true,
+  "username": "mingjie.shang@yandex.com",
+  "password": "hnkxyovqeyjrgkee",
+  "nickname": "mario",
+  "address": "mingjie.shang@yandex.com"
+}

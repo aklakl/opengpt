@@ -1,0 +1,37 @@
+{
+  "description": "Configuration schema for PostgreSQL credentials fetched from parameter store",
+  "schema": {
+    "title": "IpWarmup Config",
+    "type": "object",
+    "properties": {
+      "tableName": {
+        "description": "tableName for store the IpWarmup Config",
+        "type": "string"
+      },
+      "initialCount": {
+        "description": "initial count for IpWarmup",
+        "type": "integer"
+      },
+      "initialStep": {
+        "description": "initial step for IpWarmup",
+        "type": "integer"
+      },
+      "warningBounceRate": {
+        "description": "warning Bounce Rate for IpWarmup",
+        "type": "integer"
+      },
+      "warningReceivers": {
+        "description": "warningReceivers for IpWarmup ",
+        "type": "string"
+      }
+    },
+    "required": [
+      "tableName",
+      "initialCount",
+      "initialStep",
+      "warningBounceRate",
+      "warningReceivers"
+    ],
+    "additionalProperties": false
+  }
+}

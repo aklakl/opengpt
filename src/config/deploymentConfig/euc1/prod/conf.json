@@ -1,0 +1,95 @@
+{
+  "featureFlags": {
+    "enableNewRelicAgent": true,
+    "cors": true
+  },
+  "newRelicConfig": {
+    "appName": "harvest-crusade-api-euc1-prod"
+  },
+  "cors": {
+    "origin": [
+      "/euc1.test.opengpt.com/"
+    ]
+  },
+  "oktaSso": {
+    "authServer": "https://opengpt.okta.com/oauth2/default",
+    "allowedClients": [
+      "0oagvr6khoU8ALxYZ357"
+    ],
+    "allowedAudience": []
+  },
+  "logger": {
+    "name": "harvest-crusade-api",
+    "level": "info"
+  },
+  "brazeConfig": {
+    "campaignsListResource": "/campaigns/list",
+    "templatesEmailListResource": "/templates/email/list",
+    "messagesSendResource": "/messages/send",
+    "templatesEmailInfoResource": "/templates/email/info",
+    "contentBlocksListResource": "/content_blocks/list",
+    "contentBlocksInfoResource": "/content_blocks/info",
+    "campaignsDataSeriesResource": "/campaigns/data_series",
+    "sendsIdCreateResource": "/sends/id/create",
+    "campaignsDetailsResource": "/campaigns/details",
+    "usersTrackResource": "/users/track",
+    "sendsDataSeriesResource": "/sends/data_series",
+    "partnersResource": "/internal/partners",
+    "partnerIdSegmentTreeResource": "/$partnerId/segmentTree",
+    "defaultJourneysAndCampaignsConfig": [
+      {
+        "journeyName": "Value Discovery",
+        "description": "Value Discovery",
+        "campaigns": [
+          {
+            "campaignName": "Monthly Value Discovery",
+            "campaignType": "email",
+            "brazeCampaignId": "5e004c10-7721-82a8-240c-80fcd2594da5",
+            "brazeCampaignIdDescription": "App group: opengpt => Campaign: 'Harvest Nurture API Campaign used to track all Campaign Analytics' ",
+            "brazeTemplateId": "5036ef49-2355-4382-90a5-4aaa9ccfad8c",
+            "brazeTemplateIdDescription": "App group: opengpt => Email template: 'Harvest Nurture Monthly Value Discovery 2022_09_01_v1'",
+            "defaultSubject": "Your personalized monthly report"
+          }
+        ]
+      },
+      {
+        "journeyName": "Unclassified",
+        "description": "Unclassified",
+        "campaigns": [
+          {
+            "campaignName": "IP warming",
+            "campaignType": "email",
+            "brazeCampaignId": "5e004c10-7721-82a8-240c-80fcd2594da5",
+            "brazeCampaignIdDescription": "App group: opengpt => Campaign: 'Harvest Nurture API Campaign used to track all Campaign Analytics' ",
+            "brazeTemplateId": "ac8dd5e3-8747-4e3e-a9c2-38edfa7602cd",
+            "brazeTemplateIdDescription": "App group: opengpt => Email template: 'Harvest Nurture IP Warmup 2022_09_01_v1'",
+            "defaultSubject": "Thank you from Harvest Nurture"
+          }
+        ]
+      }
+    ],
+    "defaultPartnerConfiguration": {
+      "email": {
+        "displayNameAddress": {
+          "fromDisplayName": "Marketing Team",
+          "localPart": "Marketing",
+          "domain": "dev.campaigns.opengptdesign.io",
+          "ipPool": "dev.campaigns.opengptdesign.io"
+        },
+        "replyToAddress": {
+          "fromDisplayName": "no_reply@dev.campaigns.opengptdesign.io"
+        },
+        "logo": {
+          "url": "https://braze-images.com/appboy/communication/assets/image_assets/images/62fe629d4558ff3261ef7c81/original.png"
+        },
+        "colorPrimary": "6269ff",
+        "colorSecondary": "111111",
+        "introduction": "Greetings {{${first_name}| default: 'there' }} </br></br> Here are your personalized stats from your first month as a HomePass member. Thank you for being a part of the community.",
+        "footer": "This email was sent by [organization name] powered by opengpt. </br>      [CSP Name] :: [CSP address line 1] :: [CSP city]  [CSP state] [CSP zip] </br>   For help contact lorem@yourcompany.com </br>  <a href='https://www.google.com/' rel='noopener noreferrer' target='_blank' style='font-size: 14px;'>Unsubscribe</a><span style='font-size: 14px;'>&nbsp;</span> to future notifications and marketing emails </p>"
+      },
+      "notification": {
+        "brazeCampaignId": "5e004c10-7721-82a8-240c-80fcd2594da5"
+      }
+    }
+  }
+}

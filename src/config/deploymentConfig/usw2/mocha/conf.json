@@ -1,0 +1,161 @@
+{
+  "featureFlags": {
+    "cors": true,
+    "enableNewRelicAgent": false
+  },
+  "cors": {
+    "origin": [
+      "/mocha\\.test.opengpt.com/"
+    ]
+  },
+  "oktaSso": {
+    "authServer": "https://dev-741674.oktapreview.com/oauth2/default",
+    "allowedClients": [
+      "0oa15glvqezXd8EHR0h8"
+    ],
+    "allowedAudience": []
+  },
+  "logger": {
+    "name": "harvest-crusade-api",
+    "level": "debug",
+    "transport": {
+      "target": "pino-pretty"
+    }
+  },
+  "brazeConfig": {
+    "campaignsListResource": "/campaigns/list",
+    "templatesEmailListResource": "/templates/email/list",
+    "messagesSendResource": "/messages/send",
+    "templatesEmailInfoResource": "/templates/email/info",
+    "contentBlocksListResource": "/content_blocks/list",
+    "contentBlocksInfoResource": "/content_blocks/info",
+    "campaignsDataSeriesResource": "/campaigns/data_series",
+    "sendsIdCreateResource": "/sends/id/create",
+    "campaignsDetailsResource": "/campaigns/details",
+    "usersTrackResource": "/users/track",
+    "sendsDataSeriesResource": "/sends/data_series",
+    "partnersResource": "/internal/partners",
+    "partnerIdSegmentTreeResource": "/$partnerId/segmentTree",
+    "createSegmentNode": "/$partnerId/segmentNode",
+    "defaultJourneysAndCampaignsConfig": [
+      {
+        "journeyName": "Value Discovery",
+        "description": "Value Discovery",
+        "campaigns": [
+          {
+            "campaignName": "Monthly Value Discovery",
+            "campaignType": "email",
+            "brazeCampaignId": "2103b6fd-5a43-d8db-b759-cbb7cd05342f",
+            "brazeCampaignIdDescription": "App group: Data Services - Dev => Campaign: 'Harvest API Campaign used to track all Campaign Analytics' ",
+            "brazeTemplateId": "04c750eb-7ecc-419a-b647-ac2d69f682f4",
+            "brazeTemplateIdDescription": "App group: Data Services - Dev => Email template: 'Harvest Nurture Monthly Value Discovery  - Dev'",
+            "defaultSubject": "Your personalized monthly report",
+            "templateDescription": "Share monthly personalized reports about how we have helped customers to stay connected, and securely.",
+            "thumbnail": "https://opengpt-harvest-public-assets.s3.us-west-2.amazonaws.com/nurture/templates/thumbnail_MVD.svg"
+          },
+          {
+            "campaignName": "Notable_CSP_DNU",
+            "campaignType": "email",
+            "brazeCampaignId": "2103b6fd-5a43-d8db-b759-cbb7cd05342f",
+            "brazeTemplateId": "29edacc8-3cbe-4520-8f87-6b13566f7412",
+            "defaultSubject": "default email campaign subject of Notable_CSP_DNU",
+            "templateDescription": "Share monthly personalized reports about how we have helped customers to stay connected, and securely.",
+            "thumbnail": "https://opengpt-harvest-public-assets.s3.us-west-2.amazonaws.com/nurture/templates/thumbnail_MVDintro.svg"
+          },
+          {
+            "campaignName": "Harvest Nurture Monthly Value Discovery - opengpt",
+            "campaignType": "email",
+            "brazeCampaignId": "2103b6fd-5a43-d8db-b759-cbb7cd05342f",
+            "brazeCampaignIdDescription": "App group: Data Services - Dev => Campaign: 'Harvest API Campaign used to track all Campaign Analytics' ",
+            "brazeTemplateId": "b8bf777f-9507-4ccf-a25d-f5750207c0e6",
+            "brazeTemplateIdDescription": "App group: Data Services - Dev => Email template: 'Harvest Nurture Monthly Value Discovery - opengpt'， Value Discovery test with opengpt_custom_header_introduction and opengptContentBlock email template",
+            "defaultSubject": "Your personalized monthly report with opengpt",
+            "templateDescription": "Share monthly personalized reports about how we have helped customers to stay connected, and securely.",
+            "thumbnail": "https://opengpt-harvest-public-assets.s3.us-west-2.amazonaws.com/nurture/templates/thumbnail_MVD.svg"
+          }
+        ]
+      },
+      {
+        "journeyName": "Onboarding",
+        "description": "Onboarding",
+        "campaigns": [
+          {
+            "campaignName": "Welcome",
+            "campaignType": "email",
+            "brazeCampaignId": "2103b6fd-5a43-d8db-b759-cbb7cd05342f",
+            "brazeTemplateId": "12bca7d7-bd0c-4782-a8b4-4bcfd2a9417b",
+            "defaultSubject": "default email campaign subject of Onboarding Welcome",
+            "templateDescription": "Share monthly personalized reports about how we have helped customers to stay connected, and securely.",
+            "thumbnail": "https://opengpt-harvest-public-assets.s3.us-west-2.amazonaws.com/nurture/templates/thumbnail_MVDintro.svg"
+          },
+          {
+            "campaignName": "feature breakdown",
+            "campaignType": "email",
+            "brazeCampaignId": "2103b6fd-5a43-d8db-b759-cbb7cd05342f",
+            "brazeTemplateId": "5b3d3d07-70b4-4237-b203-6e5ce6fb9031",
+            "defaultSubject": "default email campaign subject of Onboarding feature breakdown",
+            "templateDescription": "Share monthly personalized reports about how we have helped customers to stay connected, and securely.",
+            "thumbnail": "https://opengpt-harvest-public-assets.s3.us-west-2.amazonaws.com/nurture/templates/thumbnail_MVDintro.svg"
+          },
+          {
+            "campaignName": "testopengptEmailTemplate",
+            "campaignType": "email",
+            "brazeCampaignId": "2103b6fd-5a43-d8db-b759-cbb7cd05342f",
+            "brazeCampaignIdDescription": "This is individual testopengptEmailTemplate.",
+            "brazeTemplateId": "ea9de7d0-f8e5-4e8b-a5c7-4419212ee293",
+            "brazeTemplateIdDescription": "This is for testing skin color and Introduction",
+            "defaultSubject": "default email campaign subject of Onboarding testopengptEmailTemplate",
+            "templateDescription": "Share monthly personalized reports about how we have helped customers to stay connected, and securely.",
+            "thumbnail": "https://opengpt-harvest-public-assets.s3.us-west-2.amazonaws.com/nurture/templates/thumbnail_MVDintro.svg"
+          }
+        ]
+      },
+      {
+        "journeyName": "Unclassified",
+        "description": "Unclassified",
+        "campaigns": [
+          {
+            "campaignName": "IP warming",
+            "campaignType": "email",
+            "brazeCampaignId": "2103b6fd-5a43-d8db-b759-cbb7cd05342f",
+            "brazeCampaignIdDescription": "App group:  Data Services - Dev => Campaign: 'Harvest API Campaign used to track all Campaign Analytics' ",
+            "brazeTemplateId": "93175f84-48ca-4912-b9b1-d5e0bc0a8bac",
+            "brazeTemplateIdDescription": "App group:  Data Services - Dev => Email template: 'Harvest Nurture IP Warming Test'",
+            "defaultSubject": "Thank you from Harvest Nurture",
+            "templateDescription": "Share monthly personalized reports about how we have helped customers to stay connected, and securely.",
+            "thumbnail": "https://dq3xufqjfx8qc.cloudfront.net/harvest/lovely_nurture.png"
+          },
+          {
+            "campaignName": "testPushNotificationCampaign",
+            "campaignType": "pushNotification",
+            "templateDescription": "Share monthly personalized reports about how we have helped customers to stay connected, and securely.",
+            "thumbnail": "https://opengpt-harvest-public-assets.s3.us-west-2.amazonaws.com/nurture/templates/thumbnail_push.svg"
+          }
+        ]
+      }
+    ],
+    "defaultPartnerConfiguration": {
+      "email": {
+        "displayNameAddress": {
+          "fromDisplayName": "Marketing Team",
+          "localPart": "Marketing",
+          "domain": "dev.campaigns.opengptdesign.io",
+          "ipPool": "dev.campaigns.opengptdesign.io"
+        },
+        "replyToAddress": {
+          "fromDisplayName": "no_reply@dev.campaigns.opengptdesign.io"
+        },
+        "logo": {
+          "url": "https://braze-images.com/appboy/communication/assets/image_assets/images/62fe629d4558ff3261ef7c81/original.png"
+        },
+        "colorPrimary": "6269ff",
+        "colorSecondary": "111111",
+        "introduction": "Greetings {{${first_name}| default: 'there' }}  </br> </br> We're taking a closer look at your security stats this month, including how Guard is keeping your network safe from security threats.",
+        "footer": "<p style='text-align: center;'>This email was sent by [organization name] powered by opengpt.</p> </br> <p style='text-align: center;'>[CSP Name]::[CSP address line 1]::[CSP city] [CSP state] [CSP zip]</p></br> <p style='text-align: center;'>For help contact lorem@yourcompany.com</p> </br>  <p style='text-align: center;'><a href='https://www.yourcompany.com' rel='noopener noreferrer' target='_blank' style='font-size: 14px;'>Unsubscribe</a><span style='font-size: 14px;'>&nbsp;to future notifications and marketing emails </span></p>"
+      },
+      "notification": {
+        "brazeCampaignId": "2103b6fd-5a43-d8db-b759-cbb7cd05342f"
+      }
+    }
+  }
+}
